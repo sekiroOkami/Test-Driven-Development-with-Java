@@ -1,5 +1,5 @@
 package com.example;
 
-public class Letter {
-    public static final int INCORRECT = 0;
+public enum Letter {
+    INCORRECT,CORRECT
 }

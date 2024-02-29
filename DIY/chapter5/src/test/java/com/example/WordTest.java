@@ -19,8 +19,18 @@ class WordTest {
          *  return one of exactly right, right letter, wrong place, letter not present
          */
 
-        int result = score.letter(0);
+        var result = score.letter(0);
         assertThat(result).isEqualTo(Letter.INCORRECT);
+    }
+
+    @Test
+    void oneCorrectLetter() {
+        var word = new Word("A");
+
+        Score score = word.guess("A");
+
+        assertThat(score.letter(0))
+                .isEqualTo(Letter.CORRECT);
     }
 
 
