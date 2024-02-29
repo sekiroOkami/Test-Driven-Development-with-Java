@@ -5,7 +5,8 @@ public class Word {
         // no action
     }
 
-    public void guess(String attempt) {
-
+    public Score guess(String attempt) {
+        var score = new Score();
+        return score;
     }
 }

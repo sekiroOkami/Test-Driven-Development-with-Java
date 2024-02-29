@@ -19,7 +19,7 @@ class WordTest {
          *  return one of exactly right, right letter, wrong place, letter not present
          */
 
-        var result = score.letter(0);
+        int result = score.letter(0);
         assertThat(result).isEqualTo(Letter.INCORRECT);
     }
 
