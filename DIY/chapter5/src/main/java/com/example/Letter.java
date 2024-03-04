@@ -1,5 +1,5 @@
 package com.example;
 
 public enum Letter {
-    INCORRECT,CORRECT
+    INCORRECT,CORRECT,PART_CORRECT
 }
