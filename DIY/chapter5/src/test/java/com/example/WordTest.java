@@ -47,9 +47,16 @@ class WordTest {
     void allScoreCombinations() {
         var word = new Word("ARI");
         var score = word.guess("ZAI");
-        assertScoreForLetter(score, 0, Letter.INCORRECT);
-        assertScoreForLetter(score, 1, Letter.PART_CORRECT);
-        assertScoreForLetter(score, 2, Letter.CORRECT);
+        assertScoreForGuess(score, Letter.INCORRECT,Letter.PART_CORRECT,Letter.CORRECT);
+    }
+
+    private void assertScoreForGuess(Score score, Letter... expectedScores) {
+        for (int position = 0;
+             position < expectedScores.length;
+             position++) {
+            Letter expected = expectedScores[position];
+            assertThat(score.letter(position)).isEqualTo(expected);
+        }
     }
 
 

@@ -20,16 +20,20 @@ public class Score {
 
     public void assess(String attempt) {
         for (char current: attempt.toCharArray()) {
-            if (isCorrectLetter(attempt)){
-                results.add(Letter.CORRECT);
-            } else if(occursInWord(current)) {
-                results.add(Letter.PART_CORRECT);
-            } else {
-                results.add(Letter.INCORRECT);
-            }
+            scoreFor(attempt, current);
             position++;
         }
 
+    }
+
+    private void scoreFor(String attempt, char current) {
+        if (isCorrectLetter(attempt)){
+            results.add(Letter.CORRECT);
+        } else
+        if(occursInWord(current)) {
+            results.add(Letter.PART_CORRECT);
+        } else
+        results.add(Letter.INCORRECT);
     }
 
     private boolean occursInWord(char current) {
