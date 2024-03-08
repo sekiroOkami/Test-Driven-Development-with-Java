@@ -1,2 +1,7 @@
-package shapes;public interface Shape {
+package shapes;
+
+import java.awt.*;
+
+public interface Shape {
+    int area();
 }

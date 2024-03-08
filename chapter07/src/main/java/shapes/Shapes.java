@@ -3,7 +3,7 @@ package shapes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shapes {
+public class  Shapes {
     private final List<Shape> all = new ArrayList<>();
     private final Graphics graphics;
 
