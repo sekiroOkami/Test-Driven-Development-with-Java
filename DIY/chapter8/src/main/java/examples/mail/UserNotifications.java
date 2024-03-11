@@ -9,6 +9,10 @@ public class UserNotifications {
     }
 
     public void welcomeNewUser() {
-        mailServer.sendEmail("test@example.com", "Welcome", "Welcome to your account");
+        mailServer.sendEmail("test@example.com", "Welcome!", "Welcome to your account");
+    }
+
+    public void welcomeNewUser(String string) {
+        mailServer.sendEmail("test@example.com", "Welcome!", "Welcome to your account");
     }
 }
