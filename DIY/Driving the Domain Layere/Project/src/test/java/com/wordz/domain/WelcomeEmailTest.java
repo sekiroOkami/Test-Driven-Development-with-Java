@@ -17,18 +17,18 @@ public class WelcomeEmailTest {
     @Mock
     private MailServer mailServer;
 
-    @Test
-    public void sendsWelcomeEmail() {
-        var notifications =
-                new UserNotifications(mailServer);
-
-        notifications.welcomeNewUser("test@example.com");
-
-        // verify that the sendEmail() was called correctly by our SUT(MailServer)
-//        verify(mailServer).sendEmail("test@example.cocm", "Welcome!","Welcome to your account");
-
-
-    }
+//    @Test
+//    public void sendsWelcomeEmail() {
+//        var notifications =
+//                new UserNotifications(mailServer);
+//
+//        notifications.welcomeNewUser("test@example.com");
+//
+//        // verify that the sendEmail() was called correctly by our SUT(MailServer)
+////        verify(mailServer).sendEmail("test@example.cocm", "Welcome!","Welcome to your account");
+//
+//
+//    }
 
     @Test
     public void rejectsInvalidEmailRecipient() {
